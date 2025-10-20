@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@300..700&display=swap');
+
+body {
+   padding: 0;
+   margin: 0;
+   height: 100vh;
+   background-color: #ffffff;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   font-family: 'Quicksand', sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   color: #9D8189;
+}
+
+nav {
+   width: 100%;
+   box-sizing: border-box;
+   padding: 1rem 3rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav .content,
+footer .content {
+   width: 100%;
+   max-width: 2100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 3rem;
+}
+
+nav ul a {
+   color: #9D8189;
+   font-weight: 900;
+   text-decoration: none;
+   transition: 0.1s ease-in-out;
+}
+
+nav ul a:hover,
+nav ul a.active,
+footer ul a:hover,
+footer ul a.active {
+   color: #EF798A;
+}
+
+main {
+   flex: 1;
+   width: 100%;
+   box-sizing: border-box;
+   max-width: 2100px;
+   padding: 1rem 3rem;
+}
+
+h1 {
+  font-family: "Prata", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  font-style: normal;
+  color: #EF798A;
+}
+
+p.post-subtitle {
+  color: #C6ECAE;
+}
+
+footer {
+   width: 100%;
+   box-sizing: border-box;
+   padding: 0.1rem 3rem;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   font-size: 0.9rem;
+}
+
+footer ul {
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+}
+
+footer ul a {
+   color: #9D8189;
+   text-decoration: none;
+   transition: 0.1s ease-in-out;
+}
+
+p.secondary {
+   color: #EF798A;
+}
+
+a.button {
+   display: inline-block;
+   background-color: #EF798A;
+   text-decoration: none;
+   color: #fff;
+   
+   padding: 1rem 3rem;
+   border-radius: 3rem;
+   margin: 1rem 0;
+   
+   transition: 0.1s ease-in-out;
+}
+
+a.button:hover {
+   background-color: #f88899;   
+}
+
+a.button::after {
+   content: '>';
+   margin-left: 0.5rem;
+}
