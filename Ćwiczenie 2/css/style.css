@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@300..700&display=swap');
+/* Import czcionek */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
 
+/* -------------------- Body -------------------- */
 body {
    padding: 0;
    margin: 0;
-   height: 100vh;
-   background-color: #ffffff;
+   min-height: 100vh;
+   background-color: #f5c9dd;
 
    display: flex;
    flex-direction: column;
    align-items: center;
 
-   font-family: 'Quicksand', sans-serif;
+   font-family: 'Playwrite NG Modern', cursive;
    font-optical-sizing: auto;
    font-weight: 500;
    font-style: normal;
    color: #9D8189;
 }
 
+/* -------------------- Nawigacja -------------------- */
 nav {
    width: 100%;
    box-sizing: border-box;
@@ -56,6 +59,7 @@ footer ul a.active {
    color: #EF798A;
 }
 
+/* -------------------- Main -------------------- */
 main {
    flex: 1;
    width: 100%;
@@ -64,18 +68,103 @@ main {
    padding: 1rem 3rem;
 }
 
-h1 {
-  font-family: "Prata", sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
-  font-style: normal;
-  color: #EF798A;
+/* -------------------- Nagłówki -------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: inherit;
+   /* dziedziczy font z body */
+   color: #EF798A;
+   font-weight: 500;
 }
 
+/* -------------------- Teksty -------------------- */
 p.post-subtitle {
-  color: #C6ECAE;
+   color: #C6ECAE;
 }
 
+p.secondary {
+   color: #EF798A;
+}
+
+/* -------------------- Przyciski -------------------- */
+a.button {
+   display: inline-block;
+   background-color: #EF798A;
+   text-decoration: none;
+   color: #fff;
+
+   padding: 1rem 3rem;
+   border-radius: 3rem;
+   margin: 1rem 0;
+
+   transition: 0.1s ease-in-out;
+}
+
+a.button:hover {
+   background-color: #f88899;
+}
+
+a.button::after {
+   content: '>';
+   margin-left: 0.5rem;
+}
+
+/* -------------------- Formularz kontaktowy -------------------- */
+.contact-form {
+   display: flex;
+   gap: 2rem;
+   flex-wrap: wrap;
+   margin-top: 2rem;
+}
+
+.contact-form .form-left,
+.contact-form .form-right {
+   flex: 1 1 300px;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.contact-form label {
+   font-weight: 500;
+   color: #9D8189;
+}
+
+.contact-form input,
+.contact-form textarea {
+   padding: 0.8rem 1rem;
+   border: 1px solid #EF798A;
+   border-radius: 0.5rem;
+   font-family: inherit;
+   font-size: 1rem;
+   color: #9D8189;
+   background-color: #fff;
+   transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+   outline: none;
+   border-color: #f88899;
+   box-shadow: 0 0 5px rgba(239, 121, 138, 0.4);
+}
+
+/* -------------------- Kontakt info -------------------- */
+.contact-info {
+   margin-top: 2rem;
+   font-size: 1rem;
+   color: #9D8189;
+}
+
+.contact-info h2 {
+   margin-bottom: 1rem;
+}
+
+/* -------------------- Footer -------------------- */
 footer {
    width: 100%;
    box-sizing: border-box;
@@ -98,30 +187,4 @@ footer ul a {
    color: #9D8189;
    text-decoration: none;
    transition: 0.1s ease-in-out;
-}
-
-p.secondary {
-   color: #EF798A;
-}
-
-a.button {
-   display: inline-block;
-   background-color: #EF798A;
-   text-decoration: none;
-   color: #fff;
-   
-   padding: 1rem 3rem;
-   border-radius: 3rem;
-   margin: 1rem 0;
-   
-   transition: 0.1s ease-in-out;
-}
-
-a.button:hover {
-   background-color: #f88899;   
-}
-
-a.button::after {
-   content: '>';
-   margin-left: 0.5rem;
 }
