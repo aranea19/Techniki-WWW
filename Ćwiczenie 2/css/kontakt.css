@@ -1,0 +1,223 @@
+/* -------------------- Import czcionek -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+
+/* -------------------- Kontakt strona główna -------------------- */
+.kontakt-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    font-family: 'Playwrite NG Modern', cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #EF798A;
+    ;
+}
+
+/* -------------------- HERO -------------------- */
+.kontakt-page .contact-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../img/kontakt/zdjj.png') no-repeat center;
+    background-size: 100% auto;
+    /* 80% szerokości, wysokość dopasowana proporcjonalnie */
+    box-shadow: 0 0 30px #eb2f4b, 0 0 10px #ef1b49, 0 0 20px #ffa1af;
+
+    /* nadal wypełnia cały element */
+    background-position: left center;
+    border: 25px solid #EF798A;
+    border-radius: 100px;
+    margin-bottom: px;
+}
+
+.kontakt-page .contact-hero h1,
+.kontakt-page .contact-hero p {
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+}
+
+/* -------------------- Container formularza i info -------------------- */
+.kontakt-page .contact-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.kontakt-page .contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* -------------------- Formularz -------------------- */
+.kontakt-page .contact-form {
+    flex: 1 1 400px;
+    display: flex;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.kontakt-page .contact-form .form-left,
+.kontakt-page .contact-form .form-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kontakt-page .contact-form label {
+    font-weight: 500;
+    color: #9D8189;
+}
+
+/* -------------------- Inputy i textarea z kolorowym tłem -------------------- */
+.kontakt-page input[name="name"],
+.kontakt-page input[name="email"],
+.kontakt-page textarea[name="message"] {
+
+    padding: 0.8rem 1rem;
+    border: 10px solid #EF798A;
+    border-radius: 40px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    color: #9D8189;
+    background-color: #fadce6;
+    /* tutaj kolor tła */
+    transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+
+
+}
+
+.kontakt-page textarea[name="message"] {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.kontakt-page input[name="name"]:focus,
+.kontakt-page input[name="email"]:focus,
+.kontakt-page textarea[name="message"]:focus {
+    outline: none;
+    border-color: #f88899;
+    box-shadow: 0 0 5px rgba(239, 121, 138, 0.4);
+}
+
+/* -------------------- Przycisk Wyślij (koło, niższe) -------------------- */
+.kontakt-page button,
+.kontakt-page .contact-form button {
+    margin-top: 110px;
+    display: inline-block;
+    background-color: #EF798A;
+    color: #fff;
+    font-family: 'Playwrite NG Modern', cursive;
+    font-weight: 500;
+    font-size: 1rem;
+
+    width: 80px;
+    /* szerokość koła */
+    height: 80px;
+    /* wysokość koła */
+    border-radius: 50%;
+    /* idealne koło */
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    line-height: 80px;
+    /* pionowe wycentrowanie tekstu */
+    box-sizing: border-box;
+
+}
+
+.kontakt-page button:hover,
+.kontakt-page .contact-form button:hover {
+    background-color: #f88899;
+}
+
+/* -------------------- Dane kontaktowe obok formularza -------------------- */
+.kontakt-page .contact-info {
+    flex: 1 1 250px;
+    padding: 25px;
+
+    border: 25px solid #EF798A;
+    background: url('../img/kontakt/lizak.png') no-repeat left center;
+    background-size: 110% auto;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    color: #9D8189;
+    /* neonowy glow */
+    box-shadow: 0 0 30px #eb2f4b, 0 0 10px #ef1b49, 0 0 20px #ffa1af;
+}
+
+
+
+
+.kontakt-page .contact-info h2 {
+    font-weight: 500;
+    color: #EF798A;
+}
+
+.kontakt-page .contact-info a {
+    color: #EF798A;
+    text-decoration: none;
+}
+
+.kontakt-page .contact-info a:hover {
+    color: #f88899;
+}
+
+/* -------------------- Responsywność -------------------- */
+@media (max-width: 900px) {
+    .kontakt-page .contact-container {
+        flex-direction: column;
+    }
+
+    .kontakt-page .contact-form {
+        flex-direction: column;
+    }
+}
+
+/* -------------------- Nawigacja i footer (dziedziczenie stylów) -------------------- */
+.kontakt-page nav,
+.kontakt-page footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    color: #9D8189;
+}
+
+.kontakt-page nav ul,
+.kontakt-page footer ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.kontakt-page nav ul a,
+.kontakt-page footer ul a {
+    color: #9D8189;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+}
+
+.kontakt-page nav ul a:hover,
+.kontakt-page nav ul a.active,
+.kontakt-page footer ul a:hover,
+.kontakt-page footer ul a.active {
+    color: #EF798A;
+}
