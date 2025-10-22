@@ -19,7 +19,7 @@
 /* -------------------- HERO -------------------- */
 .kontakt-page .contact-hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 50px;
     background: url('../img/kontakt/zdjj.png') no-repeat center;
     background-size: 100% auto;
     /* 80% szerokości, wysokość dopasowana proporcjonalnie */
@@ -143,8 +143,8 @@
 
 /* -------------------- Dane kontaktowe obok formularza -------------------- */
 .kontakt-page .contact-info {
-    flex: 1 1 250px;
-    padding: 25px;
+    flex: 1 1 240px;
+    padding: 15px;
 
     border: 25px solid #EF798A;
     background: url('../img/kontakt/lizak.png') no-repeat left center;

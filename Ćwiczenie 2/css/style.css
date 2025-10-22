@@ -187,4 +187,93 @@ footer ul a {
    color: #9D8189;
    text-decoration: none;
    transition: 0.1s ease-in-out;
+
+}
+
+p.secondary {
+   color: #EF798A;
+}
+
+a.button {
+   display: inline-block;
+   background-color: #EF798A;
+   text-decoration: none;
+   color: #fff;
+
+   padding: 1rem 3rem;
+   border-radius: 3rem;
+   margin: 1rem 0;
+
+   transition: 0.1s ease-in-out;
+}
+
+a.button:hover {
+   background-color: #f88899;
+}
+
+a.button::after {
+   content: '>';
+   margin-left: 0.5rem;
+}
+
+
+/* --- Galeria przepisów --- */
+
+.kategorie {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+.kategorie p {
+   font-size: 1.2rem;
+   color: #9D8189;
+   margin-bottom: 2rem;
+}
+
+/* Siatka z kategoriami lub przepisami */
+.grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   box-sizing: border-box;
+}
+
+/* Pojedynczy link w siatce */
+.grid a {
+   display: block;
+   background-color: #fff;
+   border: 2px solid #EF798A;
+   color: #9D8189;
+   text-decoration: none;
+   padding: 2rem;
+   font-weight: 700;
+   border-radius: 1rem;
+   transition: all 0.2s ease-in-out;
+}
+
+.grid a:hover {
+   background-color: #EF798A;
+   color: #fff;
+   transform: translateY(-4px);
+}
+
+/*dopasowanie zdjecia w siatce*/
+.grid a img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 1rem;
+   margin-bottom: 1rem;
+}
+
+/*styl dla obrazków przepisów*/
+.przepis-img {
+   width: 100%;
+   max-width: 600px;
+   display: block;
+   margin: 1rem auto;
+   border-radius: 1rem;
 }
