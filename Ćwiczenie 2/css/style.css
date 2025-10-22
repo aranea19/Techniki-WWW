@@ -76,7 +76,6 @@ h4,
 h5,
 h6 {
    font-family: inherit;
-   /* dziedziczy font z body */
    color: #EF798A;
    font-weight: 500;
 }
@@ -171,7 +170,7 @@ footer {
    padding: 0.1rem 3rem;
 
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
 
    font-size: 0.9rem;
@@ -187,6 +186,7 @@ footer ul a {
    color: #9D8189;
    text-decoration: none;
    transition: 0.1s ease-in-out;
+<<<<<<< HEAD
 
 }
 
@@ -217,8 +217,11 @@ a.button::after {
 }
 
 
-/* --- Galeria przepisów --- */
+=======
+}
 
+>>>>>>> master
+/* --- Galeria przepisów --- */
 .kategorie {
    text-align: center;
    margin-top: 2rem;
@@ -271,9 +274,18 @@ a.button::after {
 
 /*styl dla obrazków przepisów*/
 .przepis-img {
+<<<<<<< HEAD
    width: 100%;
    max-width: 600px;
    display: block;
    margin: 1rem auto;
    border-radius: 1rem;
 }
+=======
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+>>>>>>> master
