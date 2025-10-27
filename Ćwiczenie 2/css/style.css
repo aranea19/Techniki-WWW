@@ -8,27 +8,104 @@ body {
    min-height: 100vh;
    width: 100%;
    background-color: #f5c9dd;
-
    display: flex;
    flex-direction: column;
    align-items: center;
-
    font-family: 'Playwrite NG Modern', cursive;
    font-optical-sizing: auto;
    font-weight: 500;
    font-style: normal;
    color: #9D8189;
+   position: relative;
+   overflow-x: hidden;
+}
+
+/* --- Dynamiczne tło z 4 zdjęciami --- */
+body {
+   background: linear-gradient(180deg, rgba(245, 201, 221, 0.9), rgba(255, 255, 255, 0.95));
+   position: relative;
+   overflow-x: hidden;
+   z-index: 0;
+}
+
+
+/* --- Dynamiczne tło z 4 zdjęciami --- */
+.bg-layer {
+   position: fixed;
+   width: 200px;
+   /* stała szerokość zdjęcia */
+   height: 200px;
+   /* stała wysokość zdjęcia */
+   background-size: cover;
+   /* wypełnia całe divy */
+   background-repeat: no-repeat;
+   background-position: center;
+   z-index: -1;
+   opacity: 0.15;
+   animation: moveBg 60s infinite alternate ease-in-out;
+}
+
+/* Pozycjonowanie i zdjęcia */
+.bg1 {
+   top: 0;
+   left: 0;
+   background-image: url("../img/bg1.jpg");
+}
+
+.bg2 {
+   top: 0;
+   right: 0;
+   background-image: url("../img/bg2.jpg");
+}
+
+.bg3 {
+   bottom: 0;
+   left: 0;
+   background-image: url("../img/bg3.jpg");
+}
+
+.bg4 {
+   bottom: 0;
+   right: 0;
+   background-image: url("../img/bg4.jpg");
+}
+
+/* Animacja przesuwania tła */
+@keyframes moveBg {
+   0% {
+      transform: translate(0, 0);
+   }
+
+   100% {
+      transform: translate(5px, 5px);
+   }
 }
 
 /* -------------------- Nawigacja -------------------- */
+.nav-logo {
+   width: 140px;
+   height: 120px;
+   background-image: url("../img/krosant.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   text-indent: -9999px;
+   overflow: hidden;
+   flex-shrink: 0;
+}
+
 nav {
    width: 100%;
    box-sizing: border-box;
    padding: 1rem 3rem;
-
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
+   z-index: 2;
+   backdrop-filter: blur(6px);
+   background: rgba(255, 255, 255, 0.35);
+   border-bottom: 1px solid rgba(239, 121, 138, 0.2);
 }
 
 nav .content,
@@ -46,29 +123,45 @@ nav ul {
 }
 
 nav ul.active {
-   position: absolute;
-   box-sizing: border-box;
-   height: calc(100% - 4rem);
+   position: fixed;
+   /* aby zakryło cały ekran */
+   top: 0;
+   left: 0;
    width: 100%;
-   top: 4rem;
-   right: 0;
+   height: 100vh;
+   /* pełna wysokość okna */
+   box-sizing: border-box;
 
    display: flex;
    flex-direction: column;
-   gap: 1rem;
-   align-items: flex-end;
+   justify-content: center;
+   /* wyśrodkowanie pionowe */
+   align-items: center;
+   /* wyśrodkowanie poziome */
+   gap: 2rem;
 
-   padding: 3rem;
+   padding: 2rem;
    margin: 0;
 
-   background-color: white;
+   background-color: #fff;
+   /* pełne białe tło */
+   z-index: 999;
+   /* nad wszystkim */
+   transition: opacity 0.3s ease-in-out;
 }
 
-nav ul a {
+nav ul.active a {
    color: #9D8189;
+   /* zachowuje Twój kolor */
    font-weight: 900;
+   /* zachowuje Twój styl */
    text-decoration: none;
-   transition: 0.1s ease-in-out;
+   transition: 0.2s ease-in-out;
+}
+
+nav ul.active a:hover {
+   color: #EF798A;
+   /* jak wcześniej */
 }
 
 nav ul a:hover,
@@ -90,6 +183,23 @@ main {
    box-sizing: border-box;
    max-width: 2100px;
    padding: 1rem 3rem;
+   position: relative;
+   z-index: 1;
+   animation: fadeIn 1.2s ease-out forwards;
+   opacity: 0;
+}
+
+/* --- Animacja wchodzenia treści --- */
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 
 /* -------------------- Nagłówki -------------------- */
@@ -119,20 +229,21 @@ a.button {
    background-color: #EF798A;
    text-decoration: none;
    color: #fff;
-
    padding: 1rem 3rem;
    border-radius: 3rem;
    margin: 1rem 0;
-
-   transition: 0.1s ease-in-out;
+   transition: 0.3s ease-in-out;
+   box-shadow: 0 4px 10px rgba(239, 121, 138, 0.3);
 }
 
 a.button:hover {
    background-color: #f88899;
+   transform: translateY(-3px);
+   box-shadow: 0 6px 15px rgba(239, 121, 138, 0.4);
 }
 
 a.button::after {
-   content: '>';
+   content: '›';
    margin-left: 0.5rem;
 }
 
@@ -191,11 +302,13 @@ a.button::after {
 footer {
    width: 100%;
    box-sizing: border-box;
-   padding: 0.1rem 3rem;
-
+   padding: 0.5rem 3rem;
    font-size: 0.9rem;
-
    display: none;
+   position: relative;
+   z-index: 2;
+   backdrop-filter: blur(6px);
+   background: rgba(255, 255, 255, 0.3);
 }
 
 footer ul {
@@ -233,7 +346,6 @@ footer ul a {
    box-sizing: border-box;
 }
 
-/* Pojedynczy link w siatce */
 .grid a {
    display: block;
    background-color: #fff;
@@ -243,33 +355,34 @@ footer ul a {
    padding: 2rem;
    font-weight: 700;
    border-radius: 1rem;
-   transition: all 0.2s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   box-shadow: 0 3px 8px rgba(239, 121, 138, 0.15);
 }
 
 .grid a:hover {
    background-color: #EF798A;
    color: #fff;
-   transform: translateY(-4px);
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(239, 121, 138, 0.25);
 }
 
-/*dopasowanie zdjecia w siatce*/
 .grid a img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 1rem;
+   margin-bottom: 1rem;
 }
 
 /*styl dla obrazków przepisów*/
 .przepis-img {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 1rem;
+   width: 100%;
+   max-width: 600px;
+   display: block;
+   margin: 1rem auto;
+   border-radius: 1rem;
+   box-shadow: 0 6px 15px rgba(239, 121, 138, 0.25);
 }
-
 
 @media(min-width: 1024px) {
    nav ul {
@@ -286,4 +399,86 @@ footer ul a {
       justify-content: center;
       align-items: center;
    }
+}
+
+/* --- Ogólny styl dla wszystkich linków --- */
+a {
+   color: #9D8189;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+   color: #EF798A;
+   text-decoration: none;
+   /* żeby nie było niebieskiego podkreślenia */
+}
+
+a:visited {
+   color: #9D8189;
+   /* żeby po kliknięciu link nie zmieniał koloru */
+}
+
+/* --- Styl dla strony głównej --- */
+main {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 2rem;
+   min-height: 70vh;
+}
+
+main h1 {
+   font-size: 3rem;
+   color: #EF798A;
+   margin-bottom: 1rem;
+   animation: fadeInDown 1s ease-out forwards;
+}
+
+main p {
+   font-size: 1.4rem;
+   color: #9D8189;
+   max-width: 700px;
+   animation: fadeInUp 1s ease-out forwards;
+}
+
+/* --- Animacje dla tekstu --- */
+@keyframes fadeInDown {
+   from {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes fadeInUp {
+   from {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* --- Logo w stopce --- */
+.footer-logo {
+   width: 140px;
+   /* szerokość dopasowana do Twojego logo */
+   height: 120px;
+   /* wysokość dopasowana do Twojego logo */
+   background-image: url("../img/krosant.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
 }

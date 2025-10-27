@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/wyslij-przepis.css" />
+    <script src="script.js" defer></script>
+    <title>Wyślij przepis</title>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="content">
+            <div class="nav-logo">Logo</div>
+            <ul id="top-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="galeria-przepisow.html">Galeria przepisów</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="wyslij-przepis.html" class="active">Wyślij przepis</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="hamburger">
+                <path d="M4 18L20 18" stroke="#9D8189" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#9D8189" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#9D8189" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <section class="wyslij-hero">
+            <h1>Podziel się swoim przepisem!</h1>
+            <p>Masz pyszny przepis, którym chcesz się podzielić? Wypełnij poniższy formularz i dodaj zdjęcia swojego
+                dania!</p>
+        </section>
+
+        <section class="wyslij-form">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="title">Tytuł przepisu:</label>
+                <input type="text" id="title" name="title" placeholder="Nazwa przepisu" required>
+
+                <label for="author">Twoje imię:</label>
+                <input type="text" id="author" name="author" placeholder="Twoje imię" required>
+
+                <label for="ingredients">Składniki:</label>
+                <textarea id="ingredients" name="ingredients" rows="5" placeholder="Wypisz składniki"
+                    required></textarea>
+
+                <label for="steps">Sposób przygotowania:</label>
+                <textarea id="steps" name="steps" rows="7" placeholder="Opisz krok po kroku" required></textarea>
+
+                <label for="images">Dodaj zdjęcia:</label>
+                <input type="file" id="images" name="images[]" multiple accept="image/*">
+
+                <button type="submit">Wyślij przepis</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="content">
+            <div>
+                <p>Logo</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="galeria-przepisow.html">Galeria przepisów</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wyslij-przepis.html" class="active">Wyślij przepis</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
