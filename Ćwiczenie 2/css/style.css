@@ -482,3 +482,24 @@ main p {
    background-repeat: no-repeat;
    background-position: center;
 }
+
+/*przyciski powrotu do galerii przepisow */
+.back-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.35); 
+  color: #995555;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background-color: #d7beca;
+}
