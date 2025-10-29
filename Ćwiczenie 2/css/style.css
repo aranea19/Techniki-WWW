@@ -189,6 +189,10 @@ main {
    opacity: 0;
 }
 
+main.post{
+   padding-top: 0;
+}
+
 /* --- Animacja wchodzenia treści --- */
 @keyframes fadeIn {
    from {
@@ -221,30 +225,6 @@ p.post-subtitle {
 
 p.secondary {
    color: #EF798A;
-}
-
-/* -------------------- Przyciski -------------------- */
-a.button {
-   display: inline-block;
-   background-color: #EF798A;
-   text-decoration: none;
-   color: #fff;
-   padding: 1rem 3rem;
-   border-radius: 3rem;
-   margin: 1rem 0;
-   transition: 0.3s ease-in-out;
-   box-shadow: 0 4px 10px rgba(239, 121, 138, 0.3);
-}
-
-a.button:hover {
-   background-color: #f88899;
-   transform: translateY(-3px);
-   box-shadow: 0 6px 15px rgba(239, 121, 138, 0.4);
-}
-
-a.button::after {
-   content: '›';
-   margin-left: 0.5rem;
 }
 
 /* -------------------- Formularz kontaktowy -------------------- */
@@ -296,6 +276,43 @@ a.button::after {
 
 .contact-info h2 {
    margin-bottom: 1rem;
+}
+
+/* -------------------- Post -------------------- */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+   background: white;
+   width: 100%;
+   min-width: 17rem;
+   flex: 1;
+}
+
+.card .img-container {
+   height: 23rem;
+   overflow: hidden;
+   object-fit: cover;
+}
+
+.card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.card p {
+   font-size: 1rem;
+   padding: 1rem;
+}
+
+.card h2 {
+   padding: 1rem;
 }
 
 /* -------------------- Footer -------------------- */
@@ -399,6 +416,11 @@ footer ul a {
       justify-content: center;
       align-items: center;
    }
+   
+   .card {
+      flex: 0 1 23%;
+      min-width: 17rem;
+   }
 }
 
 /* --- Ogólny styl dla wszystkich linków --- */
@@ -418,6 +440,31 @@ a:hover {
 a:visited {
    color: #9D8189;
    /* żeby po kliknięciu link nie zmieniał koloru */
+}
+
+
+/* -------------------- Przyciski -------------------- */
+a.button {
+   display: inline-block;
+   background-color: #EF798A;
+   text-decoration: none;
+   color: #fff;
+   padding: 1rem 3rem;
+   border-radius: 3rem;
+   margin: 1rem;
+   transition: 0.3s ease-in-out;
+   box-shadow: 0 4px 10px rgba(239, 121, 138, 0.3);
+}
+
+a.button:hover {
+   background-color: #f88899;
+   transform: translateY(-3px);
+   box-shadow: 0 6px 15px rgba(239, 121, 138, 0.4);
+}
+
+a.button::after {
+   content: '›';
+   margin-left: 0.5rem;
 }
 
 /* --- Styl dla strony głównej --- */
