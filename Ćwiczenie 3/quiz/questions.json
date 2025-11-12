@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "Który język używany jest do stylowania stron WWW?",
+        "answers": [
+            "HTML",
+            "CSS",
+            "Python",
+            "SQL"
+        ],
+        "correct": 1
+    },
+    {
+        "id": 2,
+        "question": "Co oznacza skrót JSON?",
+        "answers": [
+            "JavaScript Object Notation",
+            "Java Standard Output Name",
+            "Joined Source Object Network",
+            "JQuery Syntax Option"
+        ],
+        "correct": 0
+    },
+    {
+        "id": 3,
+        "question": "Który znacznik HTML służy do wstawiania obrazka?",
+        "answers": [
+            "<img>",
+            "<image>",
+            "<src>",
+            "<picture>"
+        ],
+        "correct": 0
+    },
+    {
+        "id": 4,
+        "question": "Jak w JS sprawdzić typ zmiennej?",
+        "answers": [
+            "typeof zmienna",
+            "checkType(zmienna)",
+            "typeOf(zmienna)",
+            "instanceOf(zmienna)"
+        ],
+        "correct": 0
+    },
+    {
+        "id": 5,
+        "question": "Która metoda służy do dodania elementu do końca tablicy?",
+        "answers": [
+            "push()",
+            "add()",
+            "append()",
+            "insert()"
+        ],
+        "correct": 0
+    },
+    {
+        "id": 6,
+        "question": "Jak w CSS ustawić kolor tła?",
+        "answers": [
+            "background-color",
+            "bgcolor",
+            "color-bg",
+            "fill-color"
+        ],
+        "correct": 0
+    },
+    {
+        "id": 7,
+        "question": "Jakim językiem jest JavaScript?",
+        "answers": [
+            "kompilowanym",
+            "interpretowanym",
+            "asemblerowym",
+            "binarno-tekstowym"
+        ],
+        "correct": 1
+    },
+    {
+        "id": 8,
+        "question": "Co zwróci 2 + '2' w JS?",
+        "answers": [
+            "4",
+            "22",
+            "błąd",
+            "NaN"
+        ],
+        "correct": 1
+    },
+    {
+        "id": 9,
+        "question": "Jakie rozszerzenie mają pliki stylów?",
+        "answers": [
+            ".html",
+            ".css",
+            ".js",
+            ".json"
+        ],
+        "correct": 1
+    },
+    {
+        "id": 10,
+        "question": "Jak rozpocząć komentarz w JS?",
+        "answers": [
+            "//",
+            "#",
+            "<!--",
+            "/*"
+        ],
+        "correct": 0
+    }
+]

@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/quiz.schema.json",
+    "title": "Quiz Questions",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "question": {
+                "type": "string"
+            },
+            "answers": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 2
+            },
+            "correct": {
+                "type": "integer"
+            }
+        },
+        "required": [
+            "id",
+            "question",
+            "answers",
+            "correct"
+        ]
+    }
+}
